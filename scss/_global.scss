@@ -1,0 +1,157 @@
+html {
+  font-size: 50%;
+
+  @media (min-width: 1115px) {
+    font-size: 62.5%;
+  }
+
+  // @media (max-width: 1200px) {
+  //   font-size: 50%;
+  // }
+
+  // @media (max-width: 768px) {
+  //   font-size: 40%;
+  // }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #483C08;
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  @include line-height(18, 21);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1115px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &--menu {
+    max-width: 1185px;
+  }
+
+  &--intro {
+    z-index: 10;
+    width: 100%;
+    max-width: 1170px;
+    margin-top: -8.5rem;
+
+    @media (min-width: 320px) {
+      margin: 0;
+    }
+  }
+}
+
+.section {
+  @include adaptiveValue("padding-top", 100, 65);
+  @include adaptiveValue("padding-bottom", 100, 65);
+}
+
+.title {
+  font-size: rem(52);
+  font-weight: 700;
+  @include line-height(52, 62);
+  background: linear-gradient(180deg, #F9E994 0%, #537D13 56.25%, #483C08 100%);
+  background-clip: text;
+  color: transparent;
+  // text-transform: uppercase;
+}
+
+// * {
+//   // scrollbar-width: auto;
+//   scrollbar-color: #C0C0C0 #EFEFF1;
+//   //для поддержки скролл в фаерфокс
+// перебивает стили когда то было нужо для фаерфокс
+// }
+
+// .video {
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     display: block;
+//     position: relative;
+//     border-radius: 6px;
+//     transition: color 0.5s;
+
+//     &:focus {
+//         color: $focus;
+//     }
+
+//     &:hover {
+//         .video__icon {
+//             transition: background-color 0.5s;
+//             background-color: $red;
+//         }
+//     }
+
+//     &:active {
+//         color: $active;
+//     }
+
+//     &__icon {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translateX(-50%);
+//         width: 65px;
+//         height: 40px;
+//         background: rgba(0, 0, 0, .55);
+//         border-radius: 6px;
+//         position: relative;
+
+//         &::before {
+//             content: "";
+//             position: absolute;
+//             top: 30%;
+//             left: 50%;
+//             transform: translateX(-50%);
+//             z-index: 100;
+//             border-color: transparent transparent transparent $white;
+//             border-style: solid;
+//             border-width: 9.5px 0 9.5px 17px;
+//         }
+//     }
+// }
+
+
+
+// footer__link--indent
+
+// [class*="__container"] {
+//     background-color: red;
+// }
+
+// [class*="__text"] {
+//     @media (max-width: 768px) {
+//         font-size: 16px;
+//     }
+// надо будет еще протестить не грузит ли оно сайт
+// }
+
+// отзеркалить блок
+// &:nth-child(odd) {
+//   flex-direction: row-reverse;
+// }
